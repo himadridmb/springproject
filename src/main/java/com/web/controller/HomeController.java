@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-	@RequestMapping(value = { "/", "/home","/index" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/home", "/index" }, method = RequestMethod.GET)
 	public String showHomePage(Map<String, Object> model) {
 		model.put("message", "Home page");
 		return "home";
+	}
+
+	@RequestMapping(value = "/staticPage", method = RequestMethod.GET)
+	public String redirect() {
+		return "redirect:/pages/final.htm";
 	}
 }
