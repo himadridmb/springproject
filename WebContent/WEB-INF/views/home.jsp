@@ -1,4 +1,5 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <body>
 	<h2>Welcome to the home page.</h2>
@@ -12,5 +13,6 @@
 			</tr>
 		</table>
 	</form:form>
+	<h3><spring:message code="label.title"/></h3>
 </body>
 </html>
